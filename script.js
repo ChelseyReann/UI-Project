@@ -12,7 +12,7 @@ fetch(url, options)
 	.then(res => res.json())
 	.then((res) => {
         let recipe1name = res.results[0].name
-        let recipe2name = res.results[15].name
+        let recipe2name = res.results[9].name
         let recipe3name = res.results[2].name
         let recipe4name = res.results[5].name
         let recipe5name = res.results[10].name
@@ -28,8 +28,6 @@ fetch(url, options)
         recipe5.innerText = recipe5name
         
         recipe1.addEventListener("click", ()=>{
-            // let h1 = document.querySelector("h1")
-            // h1.remove()
             let h2 = document.querySelector(".recipeName")
             h2.innerText = recipe1name
             h2.style.textAlign = "center"
@@ -43,8 +41,21 @@ fetch(url, options)
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
             let instructions = document.querySelector(".recipeInstruct")
-            let instructions1 = []
-            console.log(res.results[0].instructions[0].display_text)
+            let recipe1Instructions = res.results[0].instructions
+            let ul = document.createElement("ul")
+            instructions.appendChild(ul)
+
+            for (let i = 0; i < recipe1Instructions.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = recipe1Instructions[i].display_text
+                ul.appendChild(li)
+                }
+            // let instructions = document.querySelector(".recipeInstruct")
+            // let recipe1Instruct = []
+            // console.log(res.results[0].instructions[0].display_text)
+            // console.log(res.results[0].instructions[1].display_text)
+            // console.log(res.results[0].instructions[2].display_text)
+            // console.log(res.results[0].instructions[3].display_text)
 
         })
 
@@ -54,13 +65,23 @@ fetch(url, options)
             h2.style.textAlign = "center"
             h2.style.textDecoration = "underline"
             let img = document.querySelector(".recipeImg")
-            let recipe1image = res.results[15].thumbnail_url
+            let recipe1image = res.results[9].thumbnail_url
             img.src = recipe1image
             let description = document.querySelector(".recipeDescription")
-            let description1 = res.results[15].description
+            let description1 = res.results[9].description
             description.innerText = description1
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
+            let instructions = document.querySelector(".recipeInstruct")
+            let recipe1Instructions = res.results[9].instructions
+            let ul = document.createElement("ul")
+            instructions.appendChild(ul)
+
+            for (let i = 0; i < recipe1Instructions.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = recipe1Instructions[i].display_text
+                ul.appendChild(li)
+                }
         })
 
         recipe3.addEventListener("click", ()=>{
@@ -76,6 +97,16 @@ fetch(url, options)
             description.innerText = description1
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
+            let instructions = document.querySelector(".recipeInstruct")
+            let recipe1Instructions = res.results[2].instructions
+            let ul = document.createElement("ul")
+            instructions.appendChild(ul)
+
+            for (let i = 0; i < recipe1Instructions.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = recipe1Instructions[i].display_text
+                ul.appendChild(li)
+                }
         })
 
         recipe4.addEventListener("click", ()=>{
@@ -91,6 +122,16 @@ fetch(url, options)
             description.innerText = description1
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
+            let instructions = document.querySelector(".recipeInstruct")
+            let recipe1Instructions = res.results[5].instructions
+            let ul = document.createElement("ul")
+            instructions.appendChild(ul)
+
+            for (let i = 0; i < recipe1Instructions.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = recipe1Instructions[i].display_text
+                ul.appendChild(li)
+                }
         })
 
         recipe5.addEventListener("click", ()=>{
@@ -106,6 +147,16 @@ fetch(url, options)
             description.innerText = description1
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
+            let instructions = document.querySelector(".recipeInstruct")
+            let recipe1Instructions = res.results[10].instructions
+            let ul = document.createElement("ul")
+            instructions.appendChild(ul)
+
+            for (let i = 0; i < recipe1Instructions.length; i++) {
+                let li = document.createElement("li")
+                li.innerText = recipe1Instructions[i].display_text
+                ul.appendChild(li)
+                }
         })
         
         console.log(res)

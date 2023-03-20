@@ -1,5 +1,5 @@
 body{
-    background-color: #ece7e1;
+    background-color: #FEF7F6;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -7,6 +7,7 @@ h1{
     text-align: center;
     margin-top: auto;
     text-decoration: underline;
+    font-family: 'Pacifico', cursive;
 }
 
 #menu__toggle {
@@ -70,9 +71,9 @@ h1{
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #ece7e1;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    color: #FEF7F6;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
@@ -85,4 +86,8 @@ h1{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  .recipeDescription{
+    margin: auto;
   }
