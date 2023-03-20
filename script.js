@@ -71,5 +71,23 @@ fetch(url, options)
             description.style.textAlign = "center"
             description.style.marginTop = "10px"
         })
+
+        recipe3.addEventListener("click", ()=>{
+            let h1 = document.querySelector("h1")
+            h1.remove()
+            let h2 = document.querySelector(".recipeName")
+            h2.innerText = recipe3name
+            h2.style.textAlign = "center"
+            h2.style.textDecoration = "underline"
+            let img = document.querySelector(".recipeImg")
+            let recipe1image = res.results[2].thumbnail_url
+            img.src = recipe1image
+            let description = document.querySelector(".recipeDescription")
+            let description1 = res.results[2].description
+            description.innerText = description1
+            description.style.textAlign = "center"
+            description.style.marginTop = "10px"
+        })
+        
         console.log(res)
     })
