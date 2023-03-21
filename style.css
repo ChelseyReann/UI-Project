@@ -44,7 +44,7 @@ h1{
     width: 100%;
     height: 2px;
     background-color: #131212;
-    transition-duration: .25s;
+    transition-duration: .20s;
   }
   .menu__btn > span::before {
     content: '';
@@ -94,16 +94,18 @@ h1{
 
   .recipeBox{
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    /* flex-direction: column; */
     flex-grow: 5;
-    /* justify-content: center; */
     align-content: center;
-    /* flex-grow: 4; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .recipeIngredients{
-    /* flex-grow: 1; */
     width: 30%;
-    margin-left: 35%
+    margin-left: 38%
+  }
+
+  .hidden{
+    display: none;
   }

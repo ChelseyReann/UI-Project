@@ -11,31 +11,32 @@ let url = "https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_3
 fetch(url, options)
   .then(res => res.json())
   .then((res) => {
-    let recipe1name = res.results[0].name;
-    let recipe2name = res.results[9].name;
-    let recipe3name = res.results[2].name;
-    let recipe4name = res.results[5].name;
-    let recipe5name = res.results[12].name;
-    let recipe1 = document.querySelector('#recipe1');
-    recipe1.innerText = recipe1name;
-    let recipe2 = document.querySelector("#recipe2");
-    recipe2.innerText = recipe2name;
-    let recipe3 = document.querySelector("#recipe3");
-    recipe3.innerText = recipe3name;
-    let recipe4 = document.querySelector("#recipe4");
-    recipe4.innerText = recipe4name;
-    let recipe5 = document.querySelector("#recipe5");
-    recipe5.innerText = recipe5name;
+    //assigning variables for the hamburger menu values and pulling the values from the API to populate the names
+    let recipe1name = res.results[0].name
+    let recipe2name = res.results[9].name
+    let recipe3name = res.results[2].name
+    let recipe4name = res.results[5].name
+    let recipe5name = res.results[12].name
+    let recipe1 = document.querySelector('#recipe1')
+    recipe1.innerText = recipe1name
+    let recipe2 = document.querySelector("#recipe2")
+    recipe2.innerText = recipe2name
+    let recipe3 = document.querySelector("#recipe3")
+    recipe3.innerText = recipe3name
+    let recipe4 = document.querySelector("#recipe4")
+    recipe4.innerText = recipe4name
+    let recipe5 = document.querySelector("#recipe5")
+    recipe5.innerText = recipe5name
 
     function showRecipe(index) {
-    //   let recipe1 = document.querySelector("#recipe1")
-    //   recipe1.innerText = res.results[index].name
       let h2 = document.querySelector(".recipeName")
       h2.innerText = res.results[index].name
       h2.style.textAlign = "center"
+
       let img = document.querySelector(".recipeImg")
       let recipeImg = res.results[index].thumbnail_url
       img.src = recipeImg
+
       let description = document.querySelector(".recipeDescription")
       let descriptionText = res.results[index].description
       description.innerText = descriptionText
@@ -48,6 +49,12 @@ fetch(url, options)
       let ul2 = document.createElement("ul")
       ingredients.appendChild(ul2)
 
+      for (let i = 0; i < recipeIngredients.length; i++){
+        let li2 = document.createElement("li")
+        li2.innerText = recipeIngredients[i].raw_text
+        ul2.appendChild(li2)
+      }
+
       let instructions = document.querySelector(".recipeInstruct")
       instructions.innerHTML = ""
       let recipeInstructions = res.results[index].instructions
@@ -58,12 +65,6 @@ fetch(url, options)
         let li = document.createElement("li")
         li.innerText = recipeInstructions[i].display_text
         ul.appendChild(li)
-      }
-
-      for (let i = 0; i < recipeIngredients.length; i++){
-        let li2 = document.createElement("li")
-        li2.innerText = recipeIngredients[i].raw_text
-        ul2.appendChild(li2)
       }
     }
 
