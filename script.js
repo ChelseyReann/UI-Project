@@ -28,6 +28,8 @@ fetch(url, options)
     recipe5.innerText = recipe5name;
 
     function showRecipe(index) {
+    //   let recipe1 = document.querySelector("#recipe1")
+    //   recipe1.innerText = res.results[index].name
       let h2 = document.querySelector(".recipeName")
       h2.innerText = res.results[index].name
       h2.style.textAlign = "center"
@@ -83,13 +85,5 @@ fetch(url, options)
 
     recipe5.addEventListener("click", () => {
       showRecipe(12)
-    })
-    console.log(res)
-    console.log(res.results[0].sections[0].components[0].raw_text)
-    console.log(res.results[0].sections[0].components[1].raw_text)
-    console.log(res.results[0].sections[0].components[2].raw_text)
-    console.log(res.results[0].sections[0].components[3].raw_text)
-    console.log(res.results[0].sections[0].components[4].raw_text)
-    console.log(res.results[0].sections[0].components[5].raw_text)
-    
+    }) 
   })

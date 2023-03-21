@@ -94,6 +94,16 @@ h1{
 
   .recipeBox{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
+    flex-grow: 5;
+    /* justify-content: center; */
+    align-content: center;
+    /* flex-grow: 4; */
+    flex-wrap: wrap;
+  }
+
+  .recipeIngredients{
+    /* flex-grow: 1; */
+    width: 30%;
+    margin-left: 35%
   }
