@@ -6,7 +6,7 @@ I worked with HTML, CSS, and JavaScript to create a simple recipe website. I als
 
 ## How to Use
 
-Click the link below to open the website!
+Click the link below to open the website.
 
 [Let's Get Cooking!](https://chelseyreann.github.io/UI-Project/#)
 
