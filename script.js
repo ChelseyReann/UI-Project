@@ -29,14 +29,14 @@ fetch(url, options)
     let recipe5 = document.querySelector("#recipe5");
     recipe5.innerText = recipe5name;
 
-    let menuItems = document.querySelectorAll('.menu__item')
-    let menuToggle = document.querySelector('#menu__toggle')
+    let menuItems = document.querySelectorAll(".menu__item");
+    let menuToggle = document.querySelector("#menu__toggle");
 
-    menuItems.forEach(menuItem => {
-        menuItem.addEventListener('click', () => {
-        menuToggle.checked = false
-        })
-    })
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener("click", () => {
+        menuToggle.checked = false;
+      });
+    });
 
     function showRecipe(index) {
       let h2 = document.querySelector(".recipeName");
