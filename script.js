@@ -15,7 +15,7 @@ fetch(url, options)
     let recipe2name = res.results[9].name;
     let recipe3name = res.results[2].name;
     let recipe4name = res.results[5].name;
-    let recipe5name = res.results[10].name;
+    let recipe5name = res.results[12].name;
     let recipe1 = document.querySelector('#recipe1');
     recipe1.innerText = recipe1name;
     let recipe2 = document.querySelector("#recipe2");
@@ -39,6 +39,13 @@ fetch(url, options)
       description.innerText = descriptionText
       description.style.textAlign = "center"
       description.style.marginTop = "10px"
+
+      let ingredients = document.querySelector(".recipeIngredients")
+      ingredients.innerText = ""
+      let recipeIngredients = res.results[index].sections[0].components
+      let ul2 = document.createElement("ul")
+      ingredients.appendChild(ul2)
+
       let instructions = document.querySelector(".recipeInstruct")
       instructions.innerHTML = ""
       let recipeInstructions = res.results[index].instructions
@@ -49,6 +56,12 @@ fetch(url, options)
         let li = document.createElement("li")
         li.innerText = recipeInstructions[i].display_text
         ul.appendChild(li)
+      }
+
+      for (let i = 0; i < recipeIngredients.length; i++){
+        let li2 = document.createElement("li")
+        li2.innerText = recipeIngredients[i].raw_text
+        ul2.appendChild(li2)
       }
     }
 
@@ -69,7 +82,14 @@ fetch(url, options)
     })
 
     recipe5.addEventListener("click", () => {
-      showRecipe(10)
+      showRecipe(12)
     })
-
+    console.log(res)
+    console.log(res.results[0].sections[0].components[0].raw_text)
+    console.log(res.results[0].sections[0].components[1].raw_text)
+    console.log(res.results[0].sections[0].components[2].raw_text)
+    console.log(res.results[0].sections[0].components[3].raw_text)
+    console.log(res.results[0].sections[0].components[4].raw_text)
+    console.log(res.results[0].sections[0].components[5].raw_text)
+    
   })

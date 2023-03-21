@@ -91,3 +91,9 @@ h1{
   .recipeDescription{
     margin: auto;
   }
+
+  .recipeBox{
+    display: flex;
+    flex-direction: row;
+    
+  }
