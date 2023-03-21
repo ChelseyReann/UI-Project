@@ -14,8 +14,6 @@ The website landing page is pretty bare bones. However, once you click on the re
 
 Once you click on a recipe, an image of the recipe will appear along with the ingredients needed and the instructions to follow along.
 
-<!-- Links -->
-
 ## Resources
 
 [Tasty's API](https://rapidapi.com/apidojo/api/tasty)
