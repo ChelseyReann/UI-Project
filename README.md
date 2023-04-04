@@ -20,7 +20,7 @@ Once you click on a recipe, an image of the recipe will appear along with the in
 
 ## Connect with me!
 
-[LinkedIn](https://www.linkedin.com/in/chelsey-alphonso-84067353/)
+[LinkedIn](https://www.linkedin.com/in/chelsey-alphonso)
 
 [Portfolio](https://chelseyreann.github.io/index.html)
 
